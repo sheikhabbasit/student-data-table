@@ -1,4 +1,3 @@
-// src/components/TileView.js
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {
@@ -110,19 +109,18 @@ const TileView = () => {
             <span className="text-font-darkGray">Gender:</span> {student.gender}
           </Typography>
           <Typography variant="body1">
-            <span className="text-font-darkGray">Grade: </span> {student.grade}
+            <span className="text-font-darkGray">Grade: </span> {student.gpa}
           </Typography>
           <Typography variant="body1">
             <span className="text-font-darkGray">Address: </span>
-            {student.address.street}, {student.address.city},{" "}
-            {student.address.zip}, {student.address.country}
+            {student?.address?.city}, {student?.address?.country}
           </Typography>
           <Typography variant="body1">
             <span className="text-font-darkGray">Age: </span> {student.age}
           </Typography>
           <Typography variant="body1">
             <span className="text-font-darkGray">Courses: </span>{" "}
-            {student.courses.join(", ")}
+            {student?.courses?.join(", ")}
           </Typography>
           <Typography variant="body1">
             <span className="text-font-darkGray">Email: </span> {student.email}
